@@ -1,0 +1,112 @@
+header{
+	text-align:center;
+	font-weight:bold;
+	border-style:ridge;           
+	border-color:gray;
+	color:blue;
+	resize: horizontal;
+	margin: 25px;                
+	padding: 10px;	
+}
+
+body{
+  background:url('pictures/waterlily.jpeg') no-repeat,url('pictures/background1.jpeg');
+  background-position: right bottom;
+}
+
+img{
+	width:200px;
+	height:150px;
+}
+
+td{
+	text-align:center;
+	padding: 10px;
+	font-size: 1.25em;
+}
+
+a:hover{						/*#1 Opacity*/
+	opacity : 0.5;
+	filter: alpha(opacity=50);
+}
+
+th{								/*#7 Gradients*/
+	font-size: 2em;
+	padding: 10px;
+	background: linear-gradient(90deg,darkgray,gray,lightgray);
+}
+
+table{							/*#2 Image Gallery*/
+	background-color: slateblue;
+	align:center;
+}
+
+[title~=flower] {
+    background-color:gray;
+}
+
+#example1{						/*#6 Backgrounds*/
+	background: url(pictures/background.jpg) right bottom no-repeat, url(top leaf.jpg) left top repeat;
+    padding: 15px;
+}
+
+p.text1{						/*#8 Text Effects*/ /*#14 Multiple Columns*/
+	width:14em;
+	border:2px solid purple;
+	word-break: keep-all;
+	background-color:gray;
+	-webkit-column-count: 2;
+	text-align:center;
+	-webkit-transform: translatex(550px) /*rotatey(0deg)*/;
+	-webkit-transition: width 2s;
+	
+}
+p.text1:hover{					/*#10 2D Transformations*/ /*#12 Transitioni*/
+	width:18em;
+}
+
+.boxflip{						/*#11 3D Transformations*/ /*#13 Animation*/
+	height:200;
+	width:240px;	
+	margin:10px;
+	float:left;
+}
+
+.boxflip> .front{
+	position: absolute;
+	-webkit-transform: perspective(600px) rotatey(0deg);
+	background: purple; width:240px; height:200px; border-radius:7px;
+	backface-visibility:hidden;
+	transition: -webkit-transform 2s linear 0s;
+}
+
+.boxflip> .back{
+	position: absolute;
+	-webkit-transform: perspective(600px) rotatey(180deg);
+	background: green; width:240px; height:200px; border-radius:7px;
+	backface-visibility:hidden;
+	transition: -webkit-transform 2s linear 0s;
+}
+
+.boxflip:hover> .front{
+	-webkit-transform: perspective(600px) rotatey(-180deg);
+}
+
+.boxflip:hover> .back{
+	-webkit-transform: perspective(600px) rotatey(-180deg);
+}
+
+div[target]{				/*#4 Attribute Selector*/ /*#15 User Interface*/
+	border: 2px solid;
+    padding: 20px; 
+    width: 300px;
+    resize: horizontal;
+    overflow: auto;
+	margin:30px
+}
+
+@media all and (min-width:100px){
+	p{
+		background-color:blue;
+	}
+}
