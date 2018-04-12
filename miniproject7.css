@@ -50,19 +50,10 @@ table{							/*#2 Image Gallery*/
     padding: 15px;
 }
 
-p.text1{						/*#8 Text Effects*/ /*#14 Multiple Columns*/
-	width:14em;
+p.text1{	
+	font-size: 25px;				/*#8 Text Effects*/ /*#14 Multiple Columns*/
 	border:2px solid purple;
-	word-break: keep-all;
 	background-color:gray;
-	-webkit-column-count: 2;
-	text-align:center;
-	-webkit-transform: translatex(550px) /*rotatey(0deg)*/;
-	-webkit-transition: width 2s;
-	
-}
-p.text1:hover{					/*#10 2D Transformations*/ /*#12 Transitioni*/
-	width:18em;
 }
 
 .boxflip{						/*#11 3D Transformations*/ /*#13 Animation*/
